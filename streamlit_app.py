@@ -12,13 +12,13 @@ st.write("텍스트 프롬프트를 입력하고 AI 이미지를 생성하세요
 
 # 텍스트 입력
 prompt = st.text_input("프롬프트를 입력하세요:")
-x = st.number_input('가로')
-y = st.number_input('세로')
+x = st.number_input('가로', step=1)
+y = st.number_input('세로', step=1)
 
 if st.button("이미지 생성"):
     if prompt and x and y:
         try:
-            size = x + 'x' + y
+            size = str(x) + 'x' + str(y)
             kwargs = {
                 "prompt": prompt,
                 "n":1,
