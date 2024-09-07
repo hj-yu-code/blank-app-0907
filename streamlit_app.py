@@ -22,7 +22,7 @@ if st.button("이미지 생성"):
             kwargs = {
                 "prompt": prompt,
                 "n":1,
-                "size":"1024x1024"
+                "size": size
             }
 
             # OpenAI API를 사용하여 이미지 생성
